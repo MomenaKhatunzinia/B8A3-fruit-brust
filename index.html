@@ -14,9 +14,13 @@
         tailwind.config = {
           theme: {
             extend: {
-              colors: {
-                clifford: '#da373d',
+             backgroundImage: {
+                'hero-bg': "url('./images/banner1.png')",
+                'hero2-bg': "url('./images/banner2.png')",
+                'hero3-bg': "url('./images/banner3.png')",
+                'hero4-bg': "url('./images/banner4.png')",
               }
+
             }
           }
         }
@@ -40,9 +44,9 @@
 <body>
     <header class="container mx-auto">
       <nav>
-        <div class="navbar flex justify-between bg-base-100 lg:bg-[#F85559] rounded-full mt-8 lg:p-8">
+        <div class="navbar bg-base-100 lg:bg-[#F85559] rounded-full mt-8 lg:py-8  lg:text-white">
 
-            <div class="navbar-center">
+            <div>
               <div class="dropdown">
                 <label tabindex="0" class="btn btn-ghost lg:hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -56,7 +60,7 @@
               </div>
             </div>
 
-            <div class=" hidden lg:flex">
+            <div class="navbar-start hidden lg:flex">
               <ul class="menu menu-horizontal">
                 <li><a>Home</a></li>
                 <li><a>About Us</a></li>
@@ -64,15 +68,102 @@
                 <li><a href="">All Fruits</a></li>
               </ul>
             </div>
-            <div class="navbar-center">
+            <div class="navbar-center" >
                 <img src="./images/logo.png" alt="">
-                <h2>Fruit Burst</h2>
+                <h2 class="font-bold">Fruit Burst</h2>
             </div>
-            <div class="lg:form-control">
+            <div class="navbar-end lg:form-control">
                 <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto rounded-full" />
               </div>
           </div>
       </nav>
+      <!--Exotic taste -->
+      <section>
+
+        <div class="carousel w-full mt-9">
+            <!--slid 1-->
+
+            <div id="slide1" class="carousel-item relative w-full ">
+                <div class="hero bg-hero-bg bg-cover h-[240px] lg:h-[600px]">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                    <p class="mb-5">We supply highly quality organic products</p>
+                    <button class="btn bg-[#F85559] border-none">Shope Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div> 
+            </div> 
+
+
+            <!--slid 2-->
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="hero bg-hero2-bg bg-cover h-[240px] lg:h-[600px]">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                      <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                        <p class="mb-5">We supply highly quality organic products</p>
+                        <button class="btn bg-[#F85559] border-none">Shope Now</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+
+            <!--slide-3-->
+            <div id="slide3" class="carousel-item relative w-full">
+             <div class="hero bg-hero3-bg bg-cover h-[240px] lg:h-[600px]">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                      <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                        <p class="mb-5">We supply highly quality organic products</p>
+                        <button class="btn bg-[#F85559] border-none">Shope Now</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+
+            <!--slid-4-->
+            <div id="slide4" class="carousel-item relative w-full">
+                <div class="hero bg-hero4-bg bg-cover h-[240px] lg:h-[600px]">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                      <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                        <p class="mb-5">We supply highly quality organic products</p>
+                        <button class="btn bg-[#F85559] border-none">Shope Now</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle">❮</a> 
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+
+        </section>
     </header>
     <main>
 
